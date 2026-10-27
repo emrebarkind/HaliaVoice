@@ -60,7 +60,7 @@ turn 0 '{"turnId":"turn_try_0000","turnSeq":0,"input":{"type":"call_started","la
 say 1 "Sì, va bene." rsp_0001
 say 2 "Via Dante." rsp_0002
 
-echo "== A correction inside one utterance: the latest value wins (live calls can also split it over several turns)"
+echo "== A correction inside one utterance: HALIA interprets it (live calls can also split it over several turns)"
 say 3 "Martedì mattina, anzi, giovedì pomeriggio." rsp_0003
 say 4 "Sì, confermo." rsp_0004
 first=$REPLY

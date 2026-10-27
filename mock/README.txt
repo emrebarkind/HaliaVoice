@@ -15,17 +15,18 @@ You need: Node.js (tested on version 24), bash and curl.
    "Authorization: Bearer <token>" (GET /health needs none).
 
 
-2. Play one call against it (terminal 2, in this folder)
+2. Run the API simulation (terminal 2, in this folder)
 
    ./try-it.sh
 
-   The script sends what the voice service would send during one call and prints
-   each request (>>>) and the mock's answer (<<<):
+   No phone call is made. The script sends the HTTP messages the voice service
+   would send during one call and prints each request (>>>) and the mock's
+   answer (<<<):
 
    - the call is answered; the first message carries the handoff token and HALIA
      answers with the opening;
    - the patient gives the centre, then "Martedi mattina, anzi, giovedi pomeriggio"
-     (the latest value wins) and confirms;
+     (the mock interprets the correction) and confirms;
    - the same turnId is sent again, as after a network retry: same answer, no
      second booking;
    - the patient says goodbye; HALIA ends the call; the call status is reported.
